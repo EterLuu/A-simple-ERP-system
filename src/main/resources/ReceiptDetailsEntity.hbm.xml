@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="pdc.assignment.erp.dbo.entity.ReceiptDetailsEntity" table="RECEIPT_DETAILS" schema="APP">
+        <id name="did">
+            <column name="DID" sql-type="integer"/>
+            <generator class="increment"/>
+        </id>
+        <property name="rid">
+            <column name="RID" sql-type="integer"/>
+        </property>
+        <property name="bid">
+            <column name="BID" sql-type="integer"/>
+        </property>
+        <property name="balance">
+            <column name="BALANCE" sql-type="double" precision="-1"/>
+        </property>
+        <property name="remark">
+            <column name="REMARK" sql-type="varchar(25)" length="25" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

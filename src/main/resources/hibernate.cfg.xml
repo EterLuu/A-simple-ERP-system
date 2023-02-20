@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<!--<property name="connection.url">jdbc:derby:ERP_DB;create=true</property>-->
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <property name="hibernate.connection.provider_class">org.hibernate.hikaricp.internal.HikariCPConnectionProvider</property>
+    <property name="dialect">org.hibernate.dialect.DerbyTenFiveDialect</property>
+    <property name="hibernate.show_sql">false</property>
+    <property name="hibernate.format_sql">true</property>
+    <property name="connection.url">jdbc:derby:ERP_DB;create=true</property>
+    <property name="connection.driver_class">org.apache.derby.jdbc.EmbeddedDriver</property>
+    <mapping resource="CustomersEntity.hbm.xml"/>
+    <mapping class="pdc.assignment.erp.dbo.entity.CustomersEntity"/>
+    <mapping resource="ItemsEntity.hbm.xml"/>
+    <mapping class="pdc.assignment.erp.dbo.entity.ItemsEntity"/>
+    <mapping resource="OrdersEntity.hbm.xml"/>
+    <mapping class="pdc.assignment.erp.dbo.entity.OrdersEntity"/>
+    <mapping resource="OrderDetailsEntity.hbm.xml"/>
+    <mapping class="pdc.assignment.erp.dbo.entity.OrderDetailsEntity"/>
+    <mapping resource="UsersEntity.hbm.xml"/>
+    <mapping class="pdc.assignment.erp.dbo.entity.UsersEntity"/>
+    <mapping resource="BankaccountsEntity.hbm.xml"/>
+    <mapping class="pdc.assignment.erp.dbo.entity.BankAccountsEntity"/>
+    <mapping resource="ReceiptsEntity.hbm.xml"/>
+    <mapping class="pdc.assignment.erp.dbo.entity.ReceiptsEntity"/>
+    <mapping class="pdc.assignment.erp.dbo.entity.ReceiptDetailsEntity"/>
+    <mapping resource="ReceiptDetailsEntity.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

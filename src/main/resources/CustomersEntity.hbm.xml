@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="pdc.assignment.erp.dbo.entity.CustomersEntity" table="CUSTOMERS" schema="APP">
+        <id name="cid">
+            <column name="CID" sql-type="integer"/>
+            <generator class="increment"/>
+        </id>
+        <property name="name">
+            <column name="NAME" sql-type="varchar(255)"/>
+        </property>
+        <property name="address">
+            <column name="ADDRESS" sql-type="varchar(255)"/>
+        </property>
+        <property name="telephone">
+            <column name="TELEPHONE" sql-type="varchar(255)"/>
+        </property>
+        <property name="fax">
+            <column name="FAX" sql-type="varchar(25)" length="25" not-null="true"/>
+        </property>
+        <property name="remark">
+            <column name="REMARK" sql-type="varchar(255)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

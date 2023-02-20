@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="pdc.assignment.erp.dbo.entity.UsersEntity" table="USERS" schema="APP">
+        <id name="uid">
+            <column name="UID" sql-type="integer"/>
+            <generator class="increment"/>
+        </id>
+        <property name="password">
+            <column name="PASSWORD" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="role">
+            <column name="ROLE" sql-type="integer" not-null="true"/>
+        </property>
+        <property name="registerTime">
+            <column name="REGISTER_TIME" sql-type="timestamp" not-null="true"/>
+        </property>
+        <property name="lastLoginTime">
+            <column name="LAST_LOGIN_TIME" sql-type="timestamp" not-null="false"/>
+        </property>
+        <property name="username">
+            <column name="USERNAME" sql-type="varchar(255)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
